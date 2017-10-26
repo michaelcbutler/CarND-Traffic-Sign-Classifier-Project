@@ -21,6 +21,11 @@ Refer to the [project code](https://github.com/michaelcbutler/CarND-Traffic-Sign
 [image6]: ./test-images/70kph.png "Speed limit (70km/h)"
 [image7]: ./test-images/100kph.png "Speed limit (100km/h)"
 [image8]: ./test-images/nopassing.png "No passing"
+[image9]: ./plots/baseline.png "Baseline: RGB input"
+[image10]: ./plots/gray1.png "Grayscaled input"
+[image11]: ./plots/gray2.png "Grayscaled/normalized input"
+[image12]: ./plots/gray2.drop.png "Added dropout layer"
+[image13]: ./plots/final.png "Final result"
 
 
 ## Data Set Summary & Visual Exploration
@@ -78,9 +83,11 @@ Here is an example of a traffic sign image before and after grayscale conversion
  
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+### Model Training
 
-To train the model, I used an ....
+The initial model used the Lenet classifier unmodified with RGB image input. Here is an exploratory plot showing accuracy and loss versus EPOCH for this configuration:
+
+![alt test][image9]
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
