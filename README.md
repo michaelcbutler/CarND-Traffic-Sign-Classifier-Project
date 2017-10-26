@@ -107,6 +107,7 @@ The final hyperparameters chosen were:
 * mu = 0 
 * sigma = 0.2
 * keep_prob = 0.5
+* learning rate = 0.002
 
 The corresponding plot:
 
@@ -134,7 +135,7 @@ The first four images might be difficult to classify because they differ only sl
 
 I modified the evaluate function to report the correct label and success for each sign. Only the 50 kph speed limit and no passing signs were correctly classified. This gives an accuracy of 40%.
 
-The top 5 softmax probabilities were given as:
+The top 5 softmax probabilities were reported as:
 ```
 TopKV2(values=array([[  2.79131591e-01,   2.23935887e-01,   2.17550501e-01,
           1.93769023e-01,   3.86967286e-02],
