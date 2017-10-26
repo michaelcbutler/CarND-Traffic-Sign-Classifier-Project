@@ -118,12 +118,17 @@ My final model results were:
 
 ## Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
 Here are five German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
+
+The class/labels for each are:
+* 1: Speed limit (30km/h)
+* 2: Speed limit (50km/h)
+* 4: Speed limit (70km/h)
+* 7: Speed limit (100km/h)
+* 9: No passing
 
 The first four images might be difficult to classify because they differ only slightly from all other speed limit signs. Otherwise, the images clear, well-lighted, and well-cropped.
 
