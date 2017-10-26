@@ -16,11 +16,11 @@ Refer to the [project code](https://github.com/michaelcbutler/CarND-Traffic-Sign
 [image1]: ./plots/histogram.png "Label Frequency by Data Set"
 [image2]: ./plots/signs.png "Input Image Examples by Label"
 [image3]: ./plots/grayscale.png "Grayscale Conversion and Normalization"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./test-images/30kph.png "Speed limit (30km/h)"
+[image5]: ./test-images/50kph.png "Speed limit (50km/h)"
+[image6]: ./test-images/70kph.png "Speed limit (70km/h)"
+[image7]: ./test-images/100kph.png "Speed limit (100km/h)"
+[image8]: ./test-images/nopassing.png "No passing"
 
 
 ## Data Set Summary & Visual Exploration
@@ -46,7 +46,7 @@ I also plotted an example image of each class/label from the orignal RGB data se
 
 ### Input Image Preprocessing
 
-As a first step, I decided to convert the images to grayscale to reduce the complexity of the input data set. The paper "Traffic Sign Recognition with Multi-Scale Convolutional Networks" by Sermanet and LeCunn also suggested improved accuracy from grayscale conversion. Intutively, the example images showed diverse lighting - some images were quite dark - which would affect coloring. Normalization gray values to a range of [-1,1] also helps to factor out lighting variations. 
+As a first step, I converted the images to grayscale to reduce the complexity of the input data set. The paper "Traffic Sign Recognition with Multi-Scale Convolutional Networks" by Sermanet and LeCunn also suggested improved accuracy from grayscale conversion. Intutively, the example images showed diverse lighting - some images were quite dark - which would affect coloring. Normalization gray values to a range of [-1,1] also helps to factor out lighting variations. 
 
 Here is an example of a traffic sign image before and after grayscale conversion/normalization:
 
@@ -85,9 +85,8 @@ To train the model, I used an ....
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* validation set accuracy of 0.931
+* test set accuracy of 0.914
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -144,8 +143,5 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 
 For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
 
