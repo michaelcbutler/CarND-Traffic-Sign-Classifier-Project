@@ -108,13 +108,13 @@ The final hyperparameters chosen were:
 * sigma = 0.2
 * keep_prob = 0.5
 
-My final model results were:
-* validation set accuracy of 0.931
-* test set accuracy of 0.914
-
 The corresponding plot:
 
 ![alt test][image13] 
+
+My final model results were:
+* validation set accuracy of 0.931
+* test set accuracy of 0.914
 
 ## Test a Model on New Images
 
@@ -125,38 +125,26 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first five images might be difficult to classify because they differ only slightly from all other speed limit signs. Otherwise, the images clear, well-lighted, and well-cropped.
+The first four images might be difficult to classify because they differ only slightly from all other speed limit signs. Otherwise, the images clear, well-lighted, and well-cropped.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+I modified the evaluate function to report the correct label and success for each sign. Only the 50 kph speed limit and no passing signs were correctly classified. This gives an accuracy of 40%.
 
-Here are the results of the prediction:
-
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
-
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
-
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
-
+The top 5 softmax probabilities were given as:
+```
+TopKV2(values=array([[  2.79131591e-01,   2.23935887e-01,   2.17550501e-01,
+          1.93769023e-01,   3.86967286e-02],
+       [  1.00000000e+00,   2.58500686e-11,   1.89972742e-11,
+          2.42854172e-15,   9.66791329e-18],
+       [  9.99999881e-01,   1.34942795e-07,   9.17694531e-10,
+          8.54346316e-11,   3.52302944e-11],
+       [  7.62158751e-01,   8.49280432e-02,   4.36802022e-02,
+          3.17651555e-02,   1.94632020e-02],
+       [  9.99935031e-01,   5.19764180e-05,   5.78070558e-06,
+          3.67697476e-06,   2.60516595e-06]], dtype=float32), indices=array([[12,  1,  8,  2, 25],
+       [ 2,  5,  8,  1,  7],
+       [12, 38, 35,  2, 20],
+       [18, 20, 40, 12, 11],
+       [ 9, 10, 12, 41, 20]]))
+```
+The correct choices (2 and 9) are assigned high probabilities (both essentially 1.0) but so does the incorrect third choice of 12.
 
